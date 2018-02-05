@@ -13,19 +13,10 @@ const repeatedStringMatch = (str1, str2) => {
   let searcherRepeated = str1;
   let count = 1;
 
-  if (findMeLength  >= searcherLength) {
     while (searcherRepeated.length < findMeLength) {
       searcherRepeated += str1;
       count++;
     }
-  } else {
-    if (searcherRepeated.indexOf(str2) !== -1) {
-      return 1;
-    } else {
-      searcherRepeated += str1;
-      count++;
-    }
-  }
 
 
   if (searcherRepeated.length === findMeLength) {
