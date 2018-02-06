@@ -15,7 +15,7 @@ var intersection = function(nums1, nums2) {
   var dupsHolder = [];
 
   for (var i = 0; i <= nums1.length; i++) {
-    if (nums2.indexOf(nums1[i]) !== -1) {
+    if (nums2.indexOf(nums1[i]) !== -1 && dupsHolder.indexOf(nums1[i]) === -1) {
       dupsHolder.push(nums1[i]);
       let indexNums2 = nums2.indexOf(nums1[i]);
       nums2.splice(indexNums2,1);
